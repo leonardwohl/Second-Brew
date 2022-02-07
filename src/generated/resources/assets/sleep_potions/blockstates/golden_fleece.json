@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sleep_potions:block/golden_fleece"
+    }
+  }
+}
