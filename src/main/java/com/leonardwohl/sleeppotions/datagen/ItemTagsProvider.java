@@ -1,7 +1,7 @@
 package com.leonardwohl.sleeppotions.datagen;
 
 import com.leonardwohl.sleeppotions.ItemRegistry;
-import com.leonardwohl.sleeppotions.SleepPotionsMod;
+import com.leonardwohl.sleeppotions.SecondBrewMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.ItemTags;
@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 public class ItemTagsProvider extends net.minecraft.data.tags.ItemTagsProvider {
 
     public ItemTagsProvider(DataGenerator generator, BlockTagsProvider blockTagsProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(generator, blockTagsProvider, SleepPotionsMod.MOD_ID, existingFileHelper);
+        super(generator, blockTagsProvider, SecondBrewMod.MOD_ID, existingFileHelper);
     }
 
     @Override

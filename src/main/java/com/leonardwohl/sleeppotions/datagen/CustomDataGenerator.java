@@ -1,13 +1,12 @@
 package com.leonardwohl.sleeppotions.datagen;
 
-import com.leonardwohl.sleeppotions.SleepPotionsMod;
+import com.leonardwohl.sleeppotions.SecondBrewMod;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.tags.ItemTags;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
-@Mod.EventBusSubscriber(modid = SleepPotionsMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = SecondBrewMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CustomDataGenerator {
     @SubscribeEvent
     public static void gatherServerData(GatherDataEvent event){

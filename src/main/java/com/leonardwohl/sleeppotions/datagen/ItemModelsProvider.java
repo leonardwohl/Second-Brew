@@ -1,7 +1,7 @@
 package com.leonardwohl.sleeppotions.datagen;
 
 import com.leonardwohl.sleeppotions.ItemRegistry;
-import com.leonardwohl.sleeppotions.SleepPotionsMod;
+import com.leonardwohl.sleeppotions.SecondBrewMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -10,7 +10,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 public class ItemModelsProvider extends ItemModelProvider {
 
     public ItemModelsProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, SleepPotionsMod.MOD_ID, existingFileHelper);
+        super(generator, SecondBrewMod.MOD_ID, existingFileHelper);
     }
 
     @Override

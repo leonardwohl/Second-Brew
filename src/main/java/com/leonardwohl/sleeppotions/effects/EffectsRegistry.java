@@ -1,6 +1,6 @@
 package com.leonardwohl.sleeppotions.effects;
 
-import com.leonardwohl.sleeppotions.SleepPotionsMod;
+import com.leonardwohl.sleeppotions.SecondBrewMod;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,7 +20,7 @@ public class EffectsRegistry {
     public static final int STRONG_POISON_TICKS = 432;
 
 
-    public static final DeferredRegister<MobEffect> EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, SleepPotionsMod.MOD_ID);
+    public static final DeferredRegister<MobEffect> EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, SecondBrewMod.MOD_ID);
     public static final RegistryObject<MobEffect> SLEEPING_EFFECT = EFFECTS.register("sleeping", SleepingEffect::new);
     public static final RegistryObject<MobEffect> WAKING_EFFECT = EFFECTS.register("waking", WakingEffect::new);
     public static final RegistryObject<MobEffect> LOVE_EFFECT = EFFECTS.register("love", LoveEffect::new);

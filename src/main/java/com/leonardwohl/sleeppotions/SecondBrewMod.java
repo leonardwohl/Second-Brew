@@ -13,14 +13,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("sleep_potions")
-public class SleepPotionsMod
+@Mod("second_brew")
+public class SecondBrewMod
 {
-    public static final String MOD_ID = "sleep_potions";
+    public static final String MOD_ID = "second_brew";
     // Directly reference a log4j logger.
     private static final Logger log = LogManager.getLogger();
 
-    public SleepPotionsMod() {
+    public SecondBrewMod() {
         MinecraftForge.EVENT_BUS.register(this);
         FMLJavaModLoadingContext.get().getModEventBus().register(this);
         FMLJavaModLoadingContext.get().getModEventBus().register(CustomDataGenerator.class);

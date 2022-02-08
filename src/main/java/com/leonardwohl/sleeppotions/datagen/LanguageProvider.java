@@ -1,7 +1,7 @@
 package com.leonardwohl.sleeppotions.datagen;
 
 import com.leonardwohl.sleeppotions.PotionRegistryBuilder;
-import com.leonardwohl.sleeppotions.SleepPotionsMod;
+import com.leonardwohl.sleeppotions.SecondBrewMod;
 import com.leonardwohl.sleeppotions.effects.EffectsRegistry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.ItemStack;
@@ -14,7 +14,7 @@ import static com.leonardwohl.sleeppotions.ItemRegistry.*;
 
 public class LanguageProvider extends net.minecraftforge.common.data.LanguageProvider {
     public LanguageProvider(DataGenerator gen, String locale) {
-        super(gen, SleepPotionsMod.MOD_ID, locale);
+        super(gen, SecondBrewMod.MOD_ID, locale);
     }
 
     @Override

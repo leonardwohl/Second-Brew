@@ -22,9 +22,9 @@ public class ItemRegistry {
 
     private static final Logger log = LogManager.getLogger();
 
-    public static final DeferredRegister<Potion> POTIONS = DeferredRegister.create(ForgeRegistries.POTIONS, SleepPotionsMod.MOD_ID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SleepPotionsMod.MOD_ID);
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SleepPotionsMod.MOD_ID);
+    public static final DeferredRegister<Potion> POTIONS = DeferredRegister.create(ForgeRegistries.POTIONS, SecondBrewMod.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SecondBrewMod.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SecondBrewMod.MOD_ID);
 
     //Items
     public static final RegistryObject<Block> GOLDEN_FLEECE = BLOCKS.register("golden_fleece",
