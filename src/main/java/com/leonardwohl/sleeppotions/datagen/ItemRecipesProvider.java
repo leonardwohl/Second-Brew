@@ -1,14 +1,11 @@
 package com.leonardwohl.sleeppotions.datagen;
 
-import com.leonardwohl.sleeppotions.RegistryItems;
-import mezz.jei.plugins.vanilla.brewing.BrewingRecipeMaker;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import com.leonardwohl.sleeppotions.ItemRegistry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 
 import java.util.function.Consumer;
 
@@ -20,7 +17,7 @@ public class ItemRecipesProvider extends RecipeProvider {
 
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
-        ShapedRecipeBuilder.shaped(RegistryItems.GOLDEN_FLEECE_ITEM.get())
+        ShapedRecipeBuilder.shaped(ItemRegistry.GOLDEN_FLEECE_ITEM.get())
                 .pattern("ggg")
                 .pattern("gwg")
                 .pattern("ggg")

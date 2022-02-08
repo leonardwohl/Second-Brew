@@ -1,6 +1,6 @@
 package com.leonardwohl.sleeppotions.datagen;
 
-import com.leonardwohl.sleeppotions.RegistryItems;
+import com.leonardwohl.sleeppotions.ItemRegistry;
 import com.leonardwohl.sleeppotions.SleepPotionsMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -15,22 +15,22 @@ public class ItemModelsProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        withExistingParent(RegistryItems.GOLDEN_FLEECE_ITEM.get().getRegistryName().getPath(),
+        withExistingParent(ItemRegistry.GOLDEN_FLEECE_ITEM.get().getRegistryName().getPath(),
                 modLoc("block/golden_fleece"));
 
-        super.getBuilder(RegistryItems.MOD_POTION_ITEM.get().getRegistryName().getPath())
-        .parent(new ModelFile.ExistingModelFile(mcLoc("item/generated"),existingFileHelper))
-        .texture("layer0", mcLoc("item/potion_overlay"))
-        .texture("layer1", mcLoc("item/potion"));
-
-        super.getBuilder(RegistryItems.MOD_POTION_SPLASH.get().getRegistryName().getPath())
-                .parent(new ModelFile.ExistingModelFile(mcLoc("item/generated"),existingFileHelper))
-                .texture("layer0", mcLoc("item/potion_overlay"))
-                .texture("layer1", mcLoc("item/splash_potion"));
-        super.getBuilder(RegistryItems.MOD_POTION_LINGERING.get().getRegistryName().getPath())
-                .parent(new ModelFile.ExistingModelFile(mcLoc("item/generated"),existingFileHelper))
-                .texture("layer0", mcLoc("item/potion_overlay"))
-                .texture("layer1", mcLoc("item/lingering_potion"));
+//        super.getBuilder(RegistryItems.MOD_POTION_ITEM.get().getRegistryName().getPath())
+//        .parent(new ModelFile.ExistingModelFile(mcLoc("item/generated"),existingFileHelper))
+//        .texture("layer0", mcLoc("item/potion_overlay"))
+//        .texture("layer1", mcLoc("item/potion"));
+//
+//        super.getBuilder(RegistryItems.MOD_POTION_SPLASH.get().getRegistryName().getPath())
+//                .parent(new ModelFile.ExistingModelFile(mcLoc("item/generated"),existingFileHelper))
+//                .texture("layer0", mcLoc("item/potion_overlay"))
+//                .texture("layer1", mcLoc("item/splash_potion"));
+//        super.getBuilder(RegistryItems.MOD_POTION_LINGERING.get().getRegistryName().getPath())
+//                .parent(new ModelFile.ExistingModelFile(mcLoc("item/generated"),existingFileHelper))
+//                .texture("layer0", mcLoc("item/potion_overlay"))
+//                .texture("layer1", mcLoc("item/lingering_potion"));
 //        singleTexture(RegistryItems.HONEY_POTION_ITEM.get().getRegistryName().getPath(),
 //                mcLoc("item/generated"),
 //                "layer0", mcLoc("item/honey_bottle"));
@@ -39,10 +39,10 @@ public class ItemModelsProvider extends ItemModelProvider {
 //                .texture("layer0", mcLoc("item/potion_overlay"))
 //                .texture("layer1", mcLoc("item/potion"));
 //
-//        super.getBuilder(RegistryItems.MILK_POTION_ITEM.get().getRegistryName().getPath())
-//                .parent(new ModelFile.ExistingModelFile(mcLoc("item/generated"),existingFileHelper))
-//                .texture("layer0", mcLoc("item/potion_overlay"))
-//                .texture("layer1", mcLoc("item/potion"));
+        super.getBuilder(ItemRegistry.MILK_BOTTLE_ITEM.get().getRegistryName().getPath())
+                .parent(new ModelFile.ExistingModelFile(mcLoc("item/generated"),existingFileHelper))
+                .texture("layer0", mcLoc("item/potion_overlay"))
+                .texture("layer1", mcLoc("item/potion"));
 //        singleTexture(RegistryItems.MILK_POTION_ITEM.get().getRegistryName().getPath(),
 //                mcLoc("item/generated"),
 //                "layer0", modLoc("item/milk_bottle"));

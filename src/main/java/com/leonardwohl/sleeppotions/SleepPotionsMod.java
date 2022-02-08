@@ -4,8 +4,6 @@ import com.leonardwohl.sleeppotions.datagen.CustomDataGenerator;
 import com.leonardwohl.sleeppotions.effects.EffectsRegistry;
 import com.leonardwohl.sleeppotions.effects.SleepingEffect;
 import com.leonardwohl.sleeppotions.effects.WakingEffect;
-import com.leonardwohl.sleeppotions.potions.MilkPotionItem;
-import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,22 +24,18 @@ public class SleepPotionsMod
         MinecraftForge.EVENT_BUS.register(this);
         FMLJavaModLoadingContext.get().getModEventBus().register(this);
         FMLJavaModLoadingContext.get().getModEventBus().register(CustomDataGenerator.class);
-        FMLJavaModLoadingContext.get().getModEventBus().register(RegistryItems.class);
+        FMLJavaModLoadingContext.get().getModEventBus().register(ItemRegistry.class);
         MinecraftForge.EVENT_BUS.register(SleepingEffect.class);
         MinecraftForge.EVENT_BUS.register(WakingEffect.class);
-        MinecraftForge.EVENT_BUS.register(MilkPotionItem.class);
-        MinecraftForge.EVENT_BUS.register(RegistryItems.class);
-        RegistryItems.register();
+        MinecraftForge.EVENT_BUS.register(MilkBottleItem.class);
+        MinecraftForge.EVENT_BUS.register(ItemRegistry.class);
+        ItemRegistry.register();
         EffectsRegistry.register();
     }
 
     @SubscribeEvent
     public void setUpBrewingRecipes(FMLCommonSetupEvent event) {
-        RegistryItems.setUpBrewingRecipes(event);
+        ItemRegistry.setUpBrewingRecipes(event);
     }
 
-    @SubscribeEvent
-    public void registerColors(ColorHandlerEvent.Item event){
-        RegistryItems.registerColors(event);
-    }
 }

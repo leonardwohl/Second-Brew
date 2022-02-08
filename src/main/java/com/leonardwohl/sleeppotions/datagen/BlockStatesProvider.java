@@ -1,6 +1,6 @@
 package com.leonardwohl.sleeppotions.datagen;
 
-import com.leonardwohl.sleeppotions.RegistryItems;
+import com.leonardwohl.sleeppotions.ItemRegistry;
 import com.leonardwohl.sleeppotions.SleepPotionsMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -13,6 +13,6 @@ public class BlockStatesProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        simpleBlock(RegistryItems.GOLDEN_FLEECE.get());
+        simpleBlock(ItemRegistry.GOLDEN_FLEECE.get());
     }
 }

@@ -1,8 +1,8 @@
 package com.leonardwohl.sleeppotions.datagen;
 
+import com.leonardwohl.sleeppotions.PotionRegistryBuilder;
 import com.leonardwohl.sleeppotions.SleepPotionsMod;
 import com.leonardwohl.sleeppotions.effects.EffectsRegistry;
-import com.leonardwohl.sleeppotions.potions.ModPotionItem;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -10,7 +10,7 @@ import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.leonardwohl.sleeppotions.RegistryItems.*;
+import static com.leonardwohl.sleeppotions.ItemRegistry.*;
 
 public class LanguageProvider extends net.minecraftforge.common.data.LanguageProvider {
     public LanguageProvider(DataGenerator gen, String locale) {
@@ -20,45 +20,66 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
     @Override
     protected void addTranslations() {
         add(GOLDEN_FLEECE_ITEM.get(), "Golden Fleece");
+        add(MILK_BOTTLE_ITEM.get(), "Milk Bottle");
 
         add(EffectsRegistry.SLEEPING_EFFECT.get(), "Sleeping");
         add(EffectsRegistry.WAKING_EFFECT.get(), "Waking");
         add(EffectsRegistry.LOVE_EFFECT.get(), "Love");
-        add(EffectsRegistry.GOOEY_EFFECT.get(), "No Effects");
+        add(EffectsRegistry.PEACE_EFFECT.get(), "Peace");
+        add(EffectsRegistry.PANACEA_EFFECT.get(), "Panacea");
+        add(EffectsRegistry.MAGIC_RESISTANCE_EFFECT.get(), "Magic Resistance");
+        add(EffectsRegistry.GOOEY_EFFECT.get(), "Poison Cure");
 
-        add(ModPotionItem.setPotion(new ItemStack(Items.POTION), GOOEY_POTION.get()), "Gooey Potion");
-        add(ModPotionItem.setPotion(new ItemStack(Items.SPLASH_POTION), GOOEY_POTION.get()), "Gooey Splash Potion");
-        add(ModPotionItem.setPotion(new ItemStack(Items.LINGERING_POTION), GOOEY_POTION.get()), "Gooey Lingering Potion");
-        add(ModPotionItem.setPotion(new ItemStack(Items.TIPPED_ARROW), GOOEY_POTION.get()), "Gooey Arrow");
+        registerPotionsLanguage(WITHER_POTION_REGISTRY, "Wither");
+        registerPotionsLanguage(HUNGER_REGISTRY, "Hunger");
+        registerPotionsLanguage(SATURATION_REGISTRY, "Filling");
+        registerPotionsLanguage(MINING_FATIGUE_REGISTRY, "Fatigue");
+        registerPotionsLanguage(HASTE_REGISTRY, "Haste");
+        registerPotionsLanguage(RESISTANCE_REGISTRY, "Resistance");
+        registerPotionsLanguage(LEVITATION_REGISTRY, "Levitation");
+        registerPotionsLanguage(GLOWING_REGISTRY, "Glowing");
+        registerPotionsLanguage(BLINDNESS_REGISTRY, "Blindness");
+        registerPotionsLanguage( SLOW_FALLING_REGISTRY, "Slow Falling");
+        registerPotionsLanguage(SWIFTNESS_REGISTRY, "Swiftness");
+        registerPotionsLanguage(NIGHT_VISION_REGISTRY, "Night Vision");
+        registerPotionsLanguage(LEAPING_REGISTRY, "Leaping");
+        registerPotionsLanguage(INVISIBILITY_REGISTRY, "Invisibility");
+        registerPotionsLanguage(FIRE_RESISTANCE_REGISTRY, "Fire Resistance");
+        registerPotionsLanguage(WATER_BREATHING_REGISTRY, "Water Breathing");
+        registerPotionsLanguage(REGENERATION_REGISTRY, "Regeneration");
+        registerPotionsLanguage(STRENGTH_REGISTRY, "Strength");
+
+        add(PotionUtils.setPotion(new ItemStack(Items.POTION), GOOEY_REGISTRY.getBasePotion()), "Gooey Potion");
+        add(PotionUtils.setPotion(new ItemStack(Items.SPLASH_POTION), GOOEY_REGISTRY.getBasePotion()), "Gooey Splash Potion");
+        add(PotionUtils.setPotion(new ItemStack(Items.LINGERING_POTION), GOOEY_REGISTRY.getBasePotion()), "Gooey Lingering Potion");
+        add(PotionUtils.setPotion(new ItemStack(Items.TIPPED_ARROW), GOOEY_REGISTRY.getBasePotion()), "Gooey Arrow");
 
 
-        addPotionVariants(SLEEPING_POTION, "Sleeping");
-        addPotionVariants(SLEEPING_POTION_LONG, "Sleeping");
-        addPotionVariants(WAKING_POTION, "Waking");
-        //addPotionVariants(LOVE_POTION, "Love");
+        registerPotionsLanguage(SLEEPING_REGISTRY, "Sleeping");
+        registerPotionsLanguage(WAKING_REGISTRY, "Waking");
+        registerPotionsLanguage(LOVE_REGISTRY, "Love");
+        registerPotionsLanguage(PEACE_REGISTRY, "Peace");
+        registerPotionsLanguage(PANACEA_REGISTRY, "Panacea");
+        registerPotionsLanguage(MAGIC_RESISTANCE_REGISTRY, "Magic Resistance");
 
-        addPotionVariants(HUNGER_POTION, "Hunger");
-        addPotionVariants(HUNGER_POTION_LONG, "Hunger");
-        addPotionVariants(SATURATION_POTION, "Filling");
-        addPotionVariants(SATURATION_POTION_LONG, "Filling");
-        addPotionVariants(MINING_FATIGUE_POTION, "Fatigue");
-        addPotionVariants(MINING_FATIGUE_POTION_LONG, "Fatigue");
-        addPotionVariants(MINING_FATIGUE_POTION_STRONG, "Fatigue");
-        addPotionVariants(HASTE_POTION, "Haste");
-        addPotionVariants(HASTE_POTION_LONG, "Haste");
-        addPotionVariants(HASTE_POTION_STRONG, "Haste");
-        addPotionVariants(RESISTANCE_POTION, "Resistance");
-        addPotionVariants(RESISTANCE_POTION_LONG, "Resistance");
-        addPotionVariants(RESISTANCE_POTION_STRONG, "Resistance");
-        addPotionVariants(LEVITATION_POTION, "Levitation");
-        addPotionVariants(LEVITATION_POTION_LONG, "Levitation");
-        addPotionVariants(LEVITATION_POTION_STRONG, "Levitation");
-        addPotionVariants(GLOWING_POTION, "Glowing");
-        addPotionVariants(GLOWING_POTION_LONG, "Glowing");
-        addPotionVariants(BLINDNESS_POTION, "Blindness");
-        addPotionVariants(BLINDNESS_POTION_LONG, "Blindness");
     }
 
+
+    private void registerPotionsLanguage(PotionRegistryBuilder potionRegistry, String displayKeyword){
+        addPotionVariants(potionRegistry.getBasePotion(), displayKeyword);
+        addPotionVariants(potionRegistry.getLongPotion(), displayKeyword);
+        addPotionVariants(potionRegistry.getExtraLongPotion(), displayKeyword);
+        addPotionVariants(potionRegistry.getStrongPotion(), displayKeyword);
+    }
+
+    private void addPotionVariants(Potion potion, String displayKeyword){
+        if (potion == null)
+            return;
+        add(PotionUtils.setPotion(new ItemStack(Items.POTION), potion), "Potion of "+displayKeyword);
+        add(PotionUtils.setPotion(new ItemStack(Items.SPLASH_POTION), potion), "Splash Potion of "+displayKeyword);
+        add(PotionUtils.setPotion(new ItemStack(Items.LINGERING_POTION), potion), "Lingering Potion of "+displayKeyword);
+        add(PotionUtils.setPotion(new ItemStack(Items.TIPPED_ARROW), potion), "Arrow of "+displayKeyword);
+    }
 
     private void addPotionVariants(RegistryObject<Potion> potion, String displayKeyword){
         add(PotionUtils.setPotion(new ItemStack(Items.POTION), potion.get()), "Potion of "+displayKeyword);

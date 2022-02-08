@@ -1,20 +1,14 @@
 package com.leonardwohl.sleeppotions.datagen;
 
-import com.leonardwohl.sleeppotions.RegistryItems;
+import com.leonardwohl.sleeppotions.ItemRegistry;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.HashCache;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraftforge.common.data.ForgeLootTableProvider;
 
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -32,7 +26,7 @@ public class LootTablesProvider extends LootTableProvider {
     protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables() {
         //return super.getTables();
         BlockLoot blockLoot = new BlockLoot();
-        blockLoot.dropSelf(RegistryItems.GOLDEN_FLEECE.get());
+        blockLoot.dropSelf(ItemRegistry.GOLDEN_FLEECE.get());
         //LootTable.lootTable().withPool(LootPool.lootPool().add(LootPoolEntryContainer.))
         List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> tables = super.getTables();
         tables.add(Pair.of(()->blockLoot, LootContextParamSets.BLOCK));

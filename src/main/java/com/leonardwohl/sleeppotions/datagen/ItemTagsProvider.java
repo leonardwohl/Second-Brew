@@ -1,6 +1,6 @@
 package com.leonardwohl.sleeppotions.datagen;
 
-import com.leonardwohl.sleeppotions.RegistryItems;
+import com.leonardwohl.sleeppotions.ItemRegistry;
 import com.leonardwohl.sleeppotions.SleepPotionsMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
@@ -18,7 +18,7 @@ public class ItemTagsProvider extends net.minecraft.data.tags.ItemTagsProvider {
     @Override
     protected void addTags() {
         super.addTags();
-        tag(ItemTags.WOOL).add(RegistryItems.GOLDEN_FLEECE_ITEM.get());
-        tag(ItemTags.PIGLIN_LOVED).add(RegistryItems.GOLDEN_FLEECE_ITEM.get());
+        tag(ItemTags.WOOL).add(ItemRegistry.GOLDEN_FLEECE_ITEM.get());
+        tag(ItemTags.PIGLIN_LOVED).add(ItemRegistry.GOLDEN_FLEECE_ITEM.get());
     }
 }

@@ -1,7 +1,6 @@
 package com.leonardwohl.sleeppotions.effects;
 
 import com.google.common.collect.Multimaps;
-import com.leonardwohl.sleeppotions.RegistryItems;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;

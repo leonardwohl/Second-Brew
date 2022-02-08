@@ -1,7 +1,5 @@
 package com.leonardwohl.sleeppotions.effects;
 
-import com.leonardwohl.sleeppotions.RegistryItems;
-import com.leonardwohl.sleeppotions.effects.SleepingEffect;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.InstantenousMobEffect;
@@ -18,7 +16,7 @@ import java.util.Optional;
 
 public class WakingEffect extends InstantenousMobEffect {
     public WakingEffect() {
-        super(MobEffectCategory.BENEFICIAL, 0xffb300);
+        super(MobEffectCategory.BENEFICIAL, /*0xffb300*/0xffffcc);
     }
     @Override
     public void applyInstantenousEffect(@Nullable Entity pSource, @Nullable Entity pIndirectSource, LivingEntity pLivingEntity, int pAmplifier, double pHealth) {

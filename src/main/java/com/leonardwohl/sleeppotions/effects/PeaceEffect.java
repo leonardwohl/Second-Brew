@@ -12,7 +12,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class PeaceEffect extends MobEffect {
     protected PeaceEffect() {
-        super(MobEffectCategory.BENEFICIAL, 0xffffff);
+        super(MobEffectCategory.BENEFICIAL, 0xffff00);
     }
 
     @Override
