@@ -10,7 +10,7 @@ Brew new quality-of-life effects at your brewing stand
 ### Potion of Waking
 * Corrupted from the Potion of Sleeping
 * Wakes mobs up
-* Wakes players up at their bed, 
+* Wakes players up at their bed
 ### Gooey Potion
 * Brewed with honey bottles
 * Cures Poison
