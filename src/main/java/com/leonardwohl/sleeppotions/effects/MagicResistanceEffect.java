@@ -41,11 +41,14 @@ public class MagicResistanceEffect extends MobEffect {
             return;
         }
         float damage = event.getAmount();
-        if (event.getEntityLiving() instanceof ServerPlayer serverPlayer) {
+        if (event.getEntityLiving() instanceof ServerPlayer serverPlayer)
             serverPlayer.awardStat(Stats.CUSTOM.get(Stats.DAMAGE_RESISTED), Math.round(damage * 10.0F));
-        } else if (event.getSource().getEntity() instanceof ServerPlayer serverPlayer) {
+
+        if (event.getSource().getEntity() instanceof ServerPlayer serverPlayer)
             serverPlayer.awardStat(Stats.CUSTOM.get(Stats.DAMAGE_DEALT_RESISTED), Math.round(damage * 10.0F));
-        }
+        else if (event.getSource().getDirectEntity() instanceof ServerPlayer serverPlayer)
+            serverPlayer.awardStat(Stats.CUSTOM.get(Stats.DAMAGE_DEALT_RESISTED), Math.round(damage * 10.0F));
+
         event.setAmount(0);
         event.setCanceled(true);
     }

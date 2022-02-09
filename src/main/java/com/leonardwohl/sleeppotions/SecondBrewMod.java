@@ -1,9 +1,7 @@
 package com.leonardwohl.sleeppotions;
 
 import com.leonardwohl.sleeppotions.datagen.CustomDataGenerator;
-import com.leonardwohl.sleeppotions.effects.EffectsRegistry;
-import com.leonardwohl.sleeppotions.effects.SleepingEffect;
-import com.leonardwohl.sleeppotions.effects.WakingEffect;
+import com.leonardwohl.sleeppotions.effects.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -27,6 +25,8 @@ public class SecondBrewMod
         FMLJavaModLoadingContext.get().getModEventBus().register(ItemRegistry.class);
         MinecraftForge.EVENT_BUS.register(SleepingEffect.class);
         MinecraftForge.EVENT_BUS.register(WakingEffect.class);
+        MinecraftForge.EVENT_BUS.register(MagicResistanceEffect.class);
+        MinecraftForge.EVENT_BUS.register(PeaceEffect.class);
         MinecraftForge.EVENT_BUS.register(MilkBottleItem.class);
         MinecraftForge.EVENT_BUS.register(ItemRegistry.class);
         ItemRegistry.register();

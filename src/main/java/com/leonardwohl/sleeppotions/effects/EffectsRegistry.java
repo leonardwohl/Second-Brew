@@ -2,6 +2,10 @@ package com.leonardwohl.sleeppotions.effects;
 
 import com.leonardwohl.sleeppotions.SecondBrewMod;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.level.block.BeaconBlock;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BeaconBlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
