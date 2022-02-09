@@ -1,4 +1,4 @@
-# Second-Brew
+# Second Brew
 A vanilla-like, quality-of-life potion mod for minecraft
 
 ## New Potion Effects
