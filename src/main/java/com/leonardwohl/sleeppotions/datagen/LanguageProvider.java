@@ -39,7 +39,7 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
         registerPotionsLanguage(LEVITATION_REGISTRY, "Levitation");
         registerPotionsLanguage(GLOWING_REGISTRY, "Glowing");
         registerPotionsLanguage(BLINDNESS_REGISTRY, "Blindness");
-        registerPotionsLanguage( SLOW_FALLING_REGISTRY, "Slow Falling");
+        registerPotionsLanguage(SLOW_FALLING_REGISTRY, "Slow Falling");
         registerPotionsLanguage(SWIFTNESS_REGISTRY, "Swiftness");
         registerPotionsLanguage(NIGHT_VISION_REGISTRY, "Night Vision");
         registerPotionsLanguage(LEAPING_REGISTRY, "Leaping");
